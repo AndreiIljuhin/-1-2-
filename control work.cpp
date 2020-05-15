@@ -493,7 +493,7 @@ bool add_to_turn(dl::doubly_list<sdb::Stud>*& students_turn, sdb::Stud student) 
 			return 1;
 		}
 		if (current->info.assessment == student.assessment) {
-			if (*current->info.FIO < * student.FIO) {
+			if (*current->info.FIO > * student.FIO) {
 				list_insert_item(students_turn, N, student);
 				return 1;
 			}
